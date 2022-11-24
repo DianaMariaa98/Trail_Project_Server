@@ -46,6 +46,7 @@ router.post('/mountains', async(req, res, next) => {
         overview
     })
     res.status(201).json(newMountain)
+    
    } catch (error) {
         res.json(error);
         next(error);

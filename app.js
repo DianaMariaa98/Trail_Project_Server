@@ -23,6 +23,13 @@ app.use("/auth", authRoutes);
 
 const mountainRoutes = require("./routes/mountain.routes");
 app.use("/api", mountainRoutes);
+
+const trailsRoutes = require("./routes/user.created.trail.routes");
+app.use("/api", trailsRoutes);
+
+const commentRoutes = require("./routes/comments.routes");
+app.use("/api", commentRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

@@ -3,7 +3,7 @@ const {Schema, model} = require('mongoose');
 const commentSchema = new Schema(
 {
     user: {
-        type: Schema.Types.ObjectId, ref:'User'
+        type: String
     },
     comment: {
         type: String
@@ -11,7 +11,6 @@ const commentSchema = new Schema(
     trail: {
         type: Schema.Types.ObjectId, ref: "UserCreatedTrail"
     }
-
 },
 {
     timestamps: true

@@ -10,9 +10,6 @@ const userCreatedTrailSchema = new Schema (
         type:String, 
         required: [true, 'Profile picure is required']
     },
-    mountain_name: {
-        type: String 
-    },
     image: {
         type: String
     },
@@ -20,10 +17,10 @@ const userCreatedTrailSchema = new Schema (
         type: String
     },
     distance: {
-        type: Number
+        type: String
     },
     average_time: {
-        type: Number
+        type: String
     },
     start_point: {
         type: String
@@ -49,6 +46,13 @@ const userCreatedTrailSchema = new Schema (
     overview: {
         type: String
     }, 
+    mountain: {
+        /* type: Schema.Types.ObjectId, ref:'Mountain' */
+        type:String
+    }, 
+    comments: [{
+        type:Schema.Types.ObjectId, ref:'Comment'
+    }]
 },
 {
     timestamps: true
