@@ -18,6 +18,11 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
+    profilePicture: {
+      type: String,
+      required: [true, "Profile picure is required"],
+    },
+    createdTrails : [{type: Schema.Types.ObjectId, ref:'UserCreatedTrail'}]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
@@ -26,5 +31,4 @@ const userSchema = new Schema(
 );
 
 const User = model("User", userSchema);
-
 module.exports = User;
