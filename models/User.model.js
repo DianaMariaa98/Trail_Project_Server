@@ -22,7 +22,8 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Profile picure is required"],
     },
-    createdTrails : [{type: Schema.Types.ObjectId, ref:'UserCreatedTrail'}]
+    createdTrails : [{type: Schema.Types.ObjectId, ref:'UserCreatedTrail'}],
+    likedMountains: [{type: Schema.Types.ObjectId, ref:'Mountain'}]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

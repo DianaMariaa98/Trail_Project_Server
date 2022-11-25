@@ -1,10 +1,11 @@
 const router = require('express').Router();
+const Mountain = require('../models/Mountain.model');
 const UserCreatedTrail = require('../models/User.created.trail.model');
+
 
 
 //Posting the route so we can create something
 router.post('/trail', async (req, res, next) => {
-
     try {
         const {
         name,
@@ -41,6 +42,7 @@ router.post('/trail', async (req, res, next) => {
             accomodation,
             overview 
         })
+        await Mountain.findByIdAndUpdate(mountain, {$push:{createdTrails: newCreatedTrail._id}});
         res.status(201).json(newCreatedTrail)
     } catch (error) {
         res.json(error)

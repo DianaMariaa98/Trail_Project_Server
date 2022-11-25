@@ -29,20 +29,13 @@ end_point: "Naya Pul",
 season: "<li> October - May </li> <li> October/November - March/April are best weather-wise. Go for the latter if you want to avoid the big crowds.</li> <li> December to February can be brutally cold, and the trail above Doban will often be closed due to heavy snow.</li>",
 difficulty: "Moderate to challenging",
 maps: "<li> It is highly recommanded to take trekking notes from Lonely Planet's <a href='https://www.amazon.com/Trekking-Himalaya-Walking-Bradley-Mayhew/dp/1741041880/ref=pd_sim_b_1' Trekking in the Nepal Himalaya </a> </li> <li>In addition, you can use Nepa Maps 1:150,000 Around Annapurna Pocket map. An excellent map, containing all the detail you will need for both the Circuit and the Sanctuary treks. It is widely available in Kathmandu, and at around US$3 represents very good value. </li> <li>If for planning purposes you would like to purchase a map online before arriving in Nepal, try the <a href='https://www.amazon.com/National-Geographic-Annapurna-Illustrated-Adventure/dp/1566951259'National Geographic Annapurna Map</a>.</li> <li>All meals and supplies can be bought along the way. Accommodation can be found at the often atmospheric and always affordable teahouses. In other words, there is absolutely no reason why you should be carrying a heavy pack on this walk.</li>",
-
-
-
-maps_1: "It is highly recommanded to take trekking notes from Lonely Planet's",
-maps_1_Book: "Trekking in the Nepal Himalaya",
-maps_1_Book_Link: "https://www.amazon.com/Trekking-Himalaya-Walking-Bradley-Mayhew/dp/1741041880/ref=pd_sim_b_1",
-
-
-
 conditions: "<li> A wonderfully diverse trek, the trail up to the Annapurna Sanctuary winds its way through Gurung villages, bamboo and Rhododendron forests, rice terraces, and glacial moraine.</li> <li>The trail is well marked and easy to follow.</li> <li>The highlight of the trek is the Annapurna Sanctuary itself. Situated below the south face of Annapurna, the Sanctuary is a mountain-ringed amphitheatre which in clear weather provides some of the most spectacular high altitude scenery imaginable. Don't miss the sunrise.</li> <li>Hikers with knee problems should note that there are a lot of stone steps on this trek. Keeping your pack weight to a minimum will definitely help reduce stress on your joints. The hot springs at Jhinu Danda offer some welcome relief.</li>",
 accomodation: "<li> Leave the tent at home, and enjoy the hospitality, good food, and occasional hot shower on offer at the Tea Houses.</li> <li> Some of the top rated places to stay are the upper part of Chomrong (great views and nice food) and the Annapurna base camp. Note that views at the base camp are generally best early morning.</li>",
 overview: "<li> It's recommanded linking the Annapurna Sanctuary together with the Annapurna Circuit for a fantastic 17/18 day (average time for fit walker carrying a small pack) trek.</li> <li> If you are short on time and have to choose between the two, try the Sanctuary Trek, due to fewer crowds (particularly in April/May) and no dirt roads.</li>",
 
 }
+
+
 ]
 
 async function seeds () {

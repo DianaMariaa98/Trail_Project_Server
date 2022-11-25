@@ -47,8 +47,8 @@ const userCreatedTrailSchema = new Schema (
         type: String
     }, 
     mountain: {
-        /* type: Schema.Types.ObjectId, ref:'Mountain' */
-        type:String
+        type: Schema.Types.ObjectId, ref:'Mountain'
+        /* type:String */
     }, 
     comments: [{
         type:Schema.Types.ObjectId, ref:'Comment'
