@@ -40,7 +40,10 @@ const mountainSchema = new Schema(
     },
     overview: {
         type: String
-    }, 
+    },
+    books_links: {
+        type:String
+    },
     createdTrails:[{type: Schema.Types.ObjectId, ref:"UserCreatedTrail"}]
     
 }, 

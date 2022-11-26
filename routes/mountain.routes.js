@@ -17,7 +17,8 @@ router.post('/mountains', async(req, res, next) => {
         maps,
         conditions,
         accomodation,
-        overview
+        overview, 
+        books_links
         } = req.body;
 
     const newMountain = await Mountain.create({ 
@@ -33,7 +34,8 @@ router.post('/mountains', async(req, res, next) => {
         maps,
         conditions,
         accomodation,
-        overview
+        overview,
+        books_links
     })
     res.status(201).json(newMountain)
     
