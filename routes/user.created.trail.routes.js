@@ -9,7 +9,6 @@ router.post('/trail', async (req, res, next) => {
     try {
         const {
         name,
-        profileImage,
         mountain,
         image,
         description,
@@ -27,7 +26,6 @@ router.post('/trail', async (req, res, next) => {
 
         const newCreatedTrail = await UserCreatedTrail.create({
             name,
-            profileImage,
             mountain,
             image,
             description,

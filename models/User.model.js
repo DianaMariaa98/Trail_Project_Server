@@ -22,7 +22,9 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Profile picure is required"],
     },
-    createdTrails : [{type: Schema.Types.ObjectId, ref:'UserCreatedTrail'}],
+    comments: [{
+      type:Schema.Types.ObjectId, ref:'Comment'
+    }],
     likedMountains: [{type: Schema.Types.ObjectId, ref:'Mountain'}]
   },
   {

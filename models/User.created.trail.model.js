@@ -6,10 +6,6 @@ const userCreatedTrailSchema = new Schema (
         type:String,
         required: [true, 'Name is required']
     },
-    profileImage: {
-        type:String, 
-        required: [true, 'Profile picure is required']
-    },
     image: {
         type: String
     },
@@ -47,8 +43,7 @@ const userCreatedTrailSchema = new Schema (
         type: String
     }, 
     mountain: {
-        type: Schema.Types.ObjectId, ref:'Mountain'
-        /* type:String */
+        type:String
     }, 
     comments: [{
         type:Schema.Types.ObjectId, ref:'Comment'

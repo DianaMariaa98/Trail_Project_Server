@@ -1,7 +1,16 @@
 const {Schema, model} = require('mongoose');
 
 const mountainSchema = new Schema(
-{
+{   
+    userId: {
+        type: Schema.Types.ObjectId, ref: "User"
+    },
+    continent: {
+        type:String
+    },
+    country: {
+        type:String
+    },
     mountain_name: {
         type: String 
     },
@@ -44,7 +53,7 @@ const mountainSchema = new Schema(
     books_links: {
         type:String
     },
-    createdTrails:[{type: Schema.Types.ObjectId, ref:"UserCreatedTrail"}]
+    
     
 }, 
 {

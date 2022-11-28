@@ -9,7 +9,7 @@ const commentSchema = new Schema(
         type: String
     }, 
     trail: {
-        type: Schema.Types.ObjectId, ref: "UserCreatedTrail"
+        type: Schema.Types.ObjectId, ref: "Mountain"
     }
 },
 {
