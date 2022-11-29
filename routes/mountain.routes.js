@@ -1,9 +1,13 @@
 const router = require('express').Router();
 const Mountain = require('../models/Mountain.model');
+const { isAuthenticated } = require("../middleware/jwt.middleware.js");
+const User = require('../models/User.model');
+
 
 //creating the mountains
-router.post('/mountains', async(req, res, next) => {
+router.post('/mountains', isAuthenticated, async(req, res, next) => {
    try {
+    const userId = req.payload._id;
     const { 
         continent,
         country,
@@ -39,10 +43,14 @@ router.post('/mountains', async(req, res, next) => {
         conditions,
         accomodation,
         overview,
-        books_links
+        books_links,
+        userId
         
      } )
-    res.status(201).json(newMountain)
+    await User.findByIdAndUpdate(userId, {$push: {createdMountains: newMountain._id}});
+
+    res.status(201).json(newMountain);
+
     
    } catch (error) {
         res.json(error);
@@ -76,9 +84,10 @@ router.get('/mountains/:id', async (req, res, next) => {
 
 //editing a mountain
 
-router.put('/mountains/:id', async(req, res, next) => {
+router.put('/mountains/:id', isAuthenticated ,async(req, res, next) => {
     try{
     const {id} = req.params;
+    const userId = req.payload._id;
     const {
         continent,
         country,
@@ -117,6 +126,7 @@ router.put('/mountains/:id', async(req, res, next) => {
         },
         {new:true}
     )
+    
 
     res.status(200).json(updatedMountain);
     } catch(error) {
@@ -125,9 +135,9 @@ router.put('/mountains/:id', async(req, res, next) => {
 })
 
 //next we are going to delete the mountain
-router.delete('/mountains/:id', async(req, res, next) => {
+router.delete('/mountains/:id', isAuthenticated, async(req, res, next) => {
     try {
-        
+        const userId = req.payload._id;
         const {id} = req.params;
         await Mountain.findByIdAndRemove(id);
 

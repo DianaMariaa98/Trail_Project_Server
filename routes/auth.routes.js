@@ -98,10 +98,10 @@ router.post("/login", (req, res, next) => {
 
       if (passwordCorrect) {
         // Deconstruct the user object to omit the password
-        const { _id, email, name } = foundUser;
+        const { _id, email, name, comments, likedMountains, profilePicture} = foundUser;
 
         // Create an object that will be set as the token payload
-        const payload = { _id, email, name };
+        const payload = { _id, email, name, comments, likedMountains, profilePicture };
 
         // Create a JSON Web Token and sign it
         const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
@@ -127,5 +127,18 @@ router.get("/verify", isAuthenticated, (req, res, next) => {
   // Send back the token payload object containing the user data
   res.status(200).json(req.payload);
 });
+
+router.get("/profile", isAuthenticated, async (req, res, next) => {
+  try {
+    const userId = req.payload._id;
+    const currentUser = await User.findById(userId).populate('createdMountains likedMountains')
+    res.status(200).json(currentUser);
+    
+    
+  } catch (error) {
+    console.log(error)
+  }
+})
+
 
 module.exports = router;

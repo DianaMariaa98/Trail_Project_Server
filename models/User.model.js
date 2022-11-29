@@ -19,13 +19,15 @@ const userSchema = new Schema(
       required: [true, "Name is required."],
     },
     profilePicture: {
-      type: String,
-      required: [true, "Profile picure is required"],
+      type: String
     },
     comments: [{
       type:Schema.Types.ObjectId, ref:'Comment'
     }],
-    likedMountains: [{type: Schema.Types.ObjectId, ref:'Mountain'}]
+    likedMountains: [{type: Schema.Types.ObjectId, ref:'Mountain'}],
+    createdMountains: [
+      {type: Schema.Types.ObjectId, ref:'Mountain'}
+    ],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
