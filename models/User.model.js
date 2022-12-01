@@ -20,7 +20,7 @@ const userSchema = new Schema(
     },
     profilePicture: {
       type: String,
-      default: 'https://res.cloudinary.com/ddywzkeit/image/upload/v1669573316/yuksom_hl5c80.jpg'
+      default: 'https://res.cloudinary.com/ddywzkeit/image/upload/v1669925828/mew_pphjn0.jpg'
     },
     comments: [{
       type:Schema.Types.ObjectId, ref:'Comment'
