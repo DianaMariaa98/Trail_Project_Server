@@ -19,7 +19,7 @@ router.post('/comments', async (req, res, next) => {
 
 router.get('/comments', async (req, res, next) => {
     try {
-        const createdComments = await Comment.find();
+        const createdComments = await Comment.find().populate('user');
         res.status(200).json(createdComments)
     } catch (error) {
         next(error)
