@@ -7,7 +7,7 @@ const User = require('../models/User.model');
 //creating the mountains
 router.post('/mountains', isAuthenticated, async(req, res, next) => {
    try {
-    const userId = req.payload._id;
+    const userId = req.payload._id; 
     const { 
         continent,
         country,
@@ -25,7 +25,8 @@ router.post('/mountains', isAuthenticated, async(req, res, next) => {
         accomodation,
         overview, 
         books_links
-        } = req.body;
+        } = req.body; 
+
 
     const newMountain = await Mountain.create( {
         continent,
@@ -43,10 +44,11 @@ router.post('/mountains', isAuthenticated, async(req, res, next) => {
         conditions,
         accomodation,
         overview,
-        books_links,
-        userId
+        books_links, 
+        userId 
+        /* req.body */
         
-     } )
+    })
     await User.findByIdAndUpdate(userId, {$push: {createdMountains: newMountain._id}});
 
     res.status(201).json(newMountain);
@@ -91,7 +93,7 @@ router.put('/mountains/:id', isAuthenticated ,async(req, res, next) => {
     const {
         continent,
         country,
-        mountain,
+        mountain_name,
         image,
         description,
         distance,
@@ -110,7 +112,7 @@ router.put('/mountains/:id', isAuthenticated ,async(req, res, next) => {
         {
         continent,
         country,
-        mountain,
+        mountain_name,
         image,
         description,
         distance,

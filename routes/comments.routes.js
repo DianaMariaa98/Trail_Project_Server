@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const Comment = require('../models/Comment.model');
-const UserCreatedTrail = require('../models/User.created.trail.model');
+
 
 router.post('/comments', async (req, res, next) => {
     try {

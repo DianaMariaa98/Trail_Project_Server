@@ -24,8 +24,8 @@ app.use("/api", authRoutes);
 const mountainRoutes = require("./routes/mountain.routes");
 app.use("/api", mountainRoutes);
 
-const trailsRoutes = require("./routes/user.created.trail.routes");
-app.use("/api", trailsRoutes);
+const likemountainsRoutes = require("./routes/like.mountains.routes");
+app.use("/api", likemountainsRoutes);
 
 const commentRoutes = require("./routes/comments.routes");
 app.use("/api", commentRoutes);

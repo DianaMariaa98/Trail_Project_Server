@@ -19,7 +19,8 @@ const userSchema = new Schema(
       required: [true, "Name is required."],
     },
     profilePicture: {
-      type: String
+      type: String,
+      default: 'https://res.cloudinary.com/ddywzkeit/image/upload/v1669573316/yuksom_hl5c80.jpg'
     },
     comments: [{
       type:Schema.Types.ObjectId, ref:'Comment'

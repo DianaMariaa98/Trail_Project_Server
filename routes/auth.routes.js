@@ -140,5 +140,18 @@ router.get("/profile", isAuthenticated, async (req, res, next) => {
   }
 })
 
+router.put('/profile', isAuthenticated, async (req, res, next) => {
+  try {
+    const userId = req.payload._id; 
+    const {profilePicture} = req.body;
+
+    const userUpdates = User.findByIdAndUpdate(userId, {profilePicture}, {new:true});
+    res.status(200).json(userUpdates);
+    
+  } catch (error) {
+    console.log(error)
+  }
+})
+
 
 module.exports = router;
