@@ -1,5 +1,5 @@
 <p align="center" dir="auto"></p>
-<h2 align="center" dir="auto">TrueHikers it's a Full Stack Web Application that provides all the accesible mountains in Asia and Europe.<br>🏔️ 🏕️ ☀️</h2>
+<h2 align="center" dir="auto">TrueHikers it's a Full Stack Web Application that provides almost all of the accessible trails in Asia and Europe.<br>🏔️ 🏕️ ☀️</h2>
 
 <br>
 
